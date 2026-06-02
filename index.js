@@ -1,40 +1,4 @@
-/**
- * ============================================================
- *  MarinaPark — Backend Completo v2
- *  Gestão de Acessos por Cartão / PIN
- * ============================================================
- *  Novos campos suportados no Excel de importação:
- *    Data/Hora, Nome, Departamento, ID/Cracha, Tipo de Acesso,
- *    Ponto de Controlo (ENTRADA / SAIDA)
- *
- *  Endpoints:
- *    AUTH        POST /api/auth/register
- *                POST /api/auth/login
- *                POST /api/auth/logout
- *                GET  /api/auth/me
- *
- *    CARTÕES     GET    /api/cards
- *                POST   /api/cards
- *                GET    /api/cards/:id
- *                PUT    /api/cards/:id
- *                DELETE /api/cards/:id
- *
- *    REGISTOS    GET    /api/records
- *                POST   /api/records
- *                GET    /api/records/:id
- *                PUT    /api/records/:id
- *                PATCH  /api/records/:id/status
- *                PATCH  /api/records/:id/exit
- *                DELETE /api/records/:id
- *
- *    IMPORTAÇÃO  POST   /api/records/import
- *                POST   /api/records/import-access-log  ← formato Excel da marina
- *
- *    STATS       GET    /api/stats
- *    CONFIG      GET    /api/config/price
- *                PUT    /api/config/price
- * ============================================================
- */
+ 
 
 "use strict";
 
@@ -67,6 +31,7 @@ const ALLOWED_ORIGINS = [
   "http://localhost:5000",
   "https://marinapark.pt",
   "https://www.marinapark.pt",
+  "https://odd-surf-3a94.2smarthrm.workers.dev"
 ];
 
 const VALID_STATUSES = ["paid", "unpaid", "debt", "free", "parked"];
